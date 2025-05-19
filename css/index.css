@@ -1,0 +1,327 @@
+/* Estilização do carrossel */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000000;
+    padding-top: 0;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 auto;
+    width: 33.333%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    display: block;
+}
+
+.carousel-slide .text-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FFD700;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #FFC107;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #666666;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #FFD700;
+}
+
+/* Ajustes para o formulário e mapa */
+section#contato {
+    background-color: #111827;
+}
+
+section#contato form {
+    background-color: #111827;
+}
+
+input, textarea {
+    background-color: #333333;
+    color: #FFFFFF;
+    border: 1px solid #666666;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #FFD700;
+    background-color: #333333;
+    outline: none;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: #FFC107;
+}
+
+/* Ajustes para a navbar fixa */
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: #000000;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilização do botão Agendar Consulta na navbar */
+header a[href="#loc"] {
+    background-color: #fac564;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+header a[href="#loc"]:hover {
+    background-color: #000000;
+    color: #fac564;
+    transform: scale(1.05);
+}
+
+body {
+    background-color: #000000;
+    padding-top: 80px;
+    color: #FFFFFF;
+}
+
+a {
+    color: #FFD700;
+}
+
+a:hover {
+    color: #FFC107;
+}
+
+/* Ajuste para o mapa do Google Maps */
+iframe {
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .md\:flex-row {
+        flex-direction: column;
+    }
+    .md\:w-1\/2 {
+        width: 100%;
+    }
+}
+
+/* Estilização dos Benefícios do Implante */
+section.bg-gray-700:not(#contato) .benefit-box {
+    background-color: #fac564;
+    color: #000000;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Estilização específica da seção Conheça a Doutora */
+section.bg-gray-900 {
+    color: #FFFFFF;
+}
+
+section.bg-gray-900 img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+section.bg-gray-900 .text-yellow-500 {
+    color: #FFD700 !important;
+}
+
+@media (max-width: 768px) {
+    section.bg-gray-900 .flex.md\:flex-row {
+        flex-direction: column;
+    }
+    section.bg-gray-900 .md\:pl-10 {
+        padding-left: 0;
+    }
+}
+
+/* Estilização do Footer */
+footer#footer {
+    background-color: #111827;
+}
+
+footer#footer p {
+    font-size: 0.9rem;
+}
+
+footer#footer a {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+footer#footer a i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    footer#footer p,
+    footer#footer a {
+        font-size: 0.85rem;
+    }
+}
+
+/* Estilização específica da nova seção de procedimentos */
+section.bg-gray-900 .grid > div {
+    transition: transform 0.3s ease;
+}
+
+section.bg-gray-900 .grid > div:hover {
+    transform: scale(1.05);
+}
+
+section.bg-gray-900 a {
+    display: inline-block;
+    font-weight: bold;
+}
+
+section.bg-gray-700:not(#contato) .benefit-box p {
+    font-weight: bold;
+}
+
+section.bg-gray-700:not(#contato) .benefit-box:hover {
+    transform: scale(1.05);
+}
+
+section.bg-gray-700:not(#contato) .text-highlight {
+    color: #fac564;
+}
+
+section.bg-gray-700:not(#contato) .text-white {
+    color: #FFFFFF;
+}
+
+/* Estilos para elementos dentro das seções */
+section.bg-gray-700:not(#contato) .bg-gray-700 {
+    background-color: #1A1A1A;
+}
+
+section#pacientes {
+    background-color: #1A1A1A;
+}
+
+section#servicos .bg-gray-50 {
+    background-color: #111827;
+}
+
+section#servicos .bg-white {
+    background-color: #1A1A1A;
+}
+
+section#depoimentos .bg-white {
+    background-color: #1A1A1A;
+}
+
+section#depoimentos .bg-gray-50 {
+    background-color: #333333;
+}
+
+/* Classes de cores para elementos que não têm style */
+.bg-gray-700 {
+    background-color: #1A1A1A;
+}
+
+.bg-gray-50 {
+    background-color: #333333;
+}
+
+.bg-white {
+    background-color: #1A1A1A;
+}
+
+.text-gray-300 {
+    color: #CCCCCC;
+}
+
+.text-yellow-500 {
+    color: #FFD700 !important;
+}
+
+.text-blue-600 {
+    color: #FFD700 !important;
+}
+
+.text-gray-800 {
+    color: #FFFFFF;
+}
+
+.text-gray-600 {
+    color: #CCCCCC;
+}
+
+.text-black {
+    color: #000000;
+}
