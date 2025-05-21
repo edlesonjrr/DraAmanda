@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const mensagemCodificada = encodeURIComponent(mensagemFormatada);
 
-            const numeroWhatsApp = '5581988921935';
+            const numeroWhatsApp = '5586988921935';
             const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
 
             try {
