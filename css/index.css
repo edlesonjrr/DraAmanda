@@ -1,3 +1,123 @@
+/* === ESTILO EXCLUSIVO PARA MOBILE === */
+@media (max-width: 430px) {
+    body {
+        font-size: 16px;
+        padding-top: 110px;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header img {
+        width: 150px !important;
+        height: auto;
+    }
+
+    header a[href="#loc"] {
+        margin-top: 10px;
+        display: block;
+    }
+
+    nav.space-x-6 {
+        display: none !important;
+    }
+
+    /* 🔧 Carrossel Mobile */
+    section.carousel {
+        padding-top: 1rem;
+        min-height: auto;
+        height: auto;
+    }
+
+    .carousel-slides {
+        flex-direction: column;
+        width: 100% !important;
+        transform: none !important;
+    }
+
+    /* ✅ Mantém apenas o primeiro slide */
+    .carousel-slide {
+        width: 100% !important;
+        display: block;
+        min-height: auto;
+        height: auto;
+    }
+
+    .carousel-slide:nth-child(2),
+    .carousel-slide:nth-child(3) {
+        display: none !important;
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: 600px !important;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* 🔧 Esconde botões e dots */
+    .prev,
+    .next,
+    .dots {
+        display: none !important;
+    }
+
+    /* 🔧 Ajustes de textos */
+    .text-4xl {
+        font-size: 1.75rem !important;
+    }
+
+    .text-lg {
+        font-size: 1rem !important;
+    }
+
+    .text-3xl {
+        font-size: 1.5rem !important;
+    }
+
+    /* 🔧 Mapa */
+    iframe {
+        height: 300px;
+    }
+
+    /* 🔧 Grids responsivos */
+    .grid.grid-cols-4,
+    .grid.grid-cols-2.md\:grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1rem !important;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* 🔧 Formulário */
+    form input,
+    form textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    form button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* 🔧 Rodapé */
+    footer#footer p,
+    footer#footer a {
+        font-size: 0.85rem;
+    }
+}
+
+
+
+
+
 /* Estilização do carrossel */
 .carousel {
     position: relative;
@@ -83,6 +203,8 @@
 .dot.active {
     background-color: #FFD700;
 }
+
+
 
 /* Ajustes para o formulário e mapa */
 section#contato {
@@ -324,4 +446,15 @@ section#depoimentos .bg-gray-50 {
 
 .text-black {
     color: #000000;
+}
+
+/* Botão WhatsApp Mobile */
+.whatsapp-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-mobile {
+        display: block;
+    }
 }
