@@ -483,8 +483,8 @@ section.bg-gray-700:not(#contato) .text-white {
 
 #planos-cards {
     display: flex;
-    gap: 50px;
-    margin-left: 180px; /* Desktop */
+    gap: 60px;
+    margin-left: 125px; /* Desktop */
     margin-top: 40px;
 }
 
