@@ -386,6 +386,125 @@ section.bg-gray-700:not(#contato) .text-white {
     color: #FFFFFF;
 }
 
+/* Opcional: animação suave */
+#planos img {
+    transition: transform 0.3s ease;
+}
+
+#planos img:hover {
+    transform: scale(1.1);
+}
+
+/* ----- Planos Aceitos Section ----- */
+#planos {
+    background-color: #1A1A1A;
+    padding: 3rem 0;
+}
+
+.planos-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .planos-wrapper {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.planos-image {
+    border-radius: 0.75rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.planos-text h2 {
+    color: white;
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .planos-text h2 {
+        text-align: left;
+    }
+}
+
+.planos-text h2 .subtitulo {
+    display: block;
+    color: #FACC15;
+    font-size: 1.875rem;
+    margin-top: 0.5rem;
+    margin-left: 280px; /* Desktop */
+}
+
+.card-plan {
+    background-color: #2D2D2D;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    /* ✅ Flex para centralizar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-plan:hover {
+    transform: scale(1.05);
+}
+
+.card-plan img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+    filter: brightness(1.1);
+}
+
+.card-plan span {
+    color: white;
+    margin-top: 1rem;
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+#planos-cards {
+    display: flex;
+    gap: 50px;
+    margin-left: 180px; /* Desktop */
+    margin-top: 40px;
+}
+
+/* ===== ✅ Ajustes específicos para mobile ===== */
+@media (max-width: 767px) {
+    .planos-text h2 .subtitulo {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #planos-cards {
+        margin-left: 0;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ============================================== */
+
+
 /* Estilos para elementos dentro das seções */
 section.bg-gray-700:not(#contato) .bg-gray-700 {
     background-color: #1A1A1A;

@@ -252,8 +252,47 @@
         </div>
     </section>
 
+    <!-- Planos aceitos Section -->
+    <section id="planos">
+        <div class="container mx-auto px-4">
+            <div class="planos-wrapper">
+
+                <!-- Imagem à esquerda -->
+                <div class="md:w-1/2 w-full">
+                    <img src="assets/img/AmandaAbout2.png" alt="Imagem Doutora" class="planos-image">
+                </div>
+
+                <!-- Conteúdo dos planos -->
+                <div class="md:w-1/2 w-full planos-text">
+                    <h2>
+                        Montagem e Manutenção de Aparelho Ortodôntico
+                        <br>
+                        <span class="subtitulo">pelos planos</span>
+                    </h2>
+
+                    <div id="planos-cards"
+                        class="flex flex-col md:flex-row gap-12 md:gap-[50px] justify-center md:justify-start md:ml-[180px]">
+                        <!-- Plano Humana Odonto -->
+                        <div class="card-plan">
+                            <img src="assets/img/humanalogo.png" alt="Plano Humana Odonto">
+                            <span>Humana Odonto</span>
+                        </div>
+
+                        <!-- Plano Clin Odonto -->
+                        <div class="card-plan">
+                            <img src="assets/img/clinlogo.png" alt="Plano Clin">
+                            <span>Clin Odonto</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
     <!-- Depoimentos Section -->
-    <section id="depoimentos" class="py-16 bg-white" style="background-color: #1A1A1A;">
+    <section id="depoimentos" class="py-16 bg-white" style="background-color: #111827;">
         <div class="container mx-auto text-center px-4">
             <h3 class="text-3xl font-bold text-gray-800 mb-8">O que Dizem Nossos Pacientes</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -270,13 +309,13 @@
     </section>
 
     <!-- Contato e Localização Section -->
-    <section id="contato" class="py-16 bg-gray-700">
+    <section id="contato" class="py-16 bg-gray-700" style="background-color: #1A1A1A;">
         <div id="loc" class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start">
             <div class="w-full md:w-1/2 mb-8 md:mb-0">
                 <h3 class="text-3xl font-bold mb-4 text-white">Entre em Contato</h3>
                 <p class="text-gray-300 mb-4">Entre em contato através de um de nossos canais de atendimento para
                     esclarecer suas dúvidas ou agendar uma consulta.</p>
-                <form id="contact-form" class="bg-gray-700 p-6 rounded-lg shadow-md">
+                <form id="contact-form" class="bg-gray-700 p-6 rounded-lg shadow-md" style="background-color: #1A1A1A;">
                     <div class="mb-4">
                         <label for="nome" class="block text-gray-300 mb-2">Nome</label>
                         <input type="text" id="nome" name="nome" placeholder="Seu nome" required
